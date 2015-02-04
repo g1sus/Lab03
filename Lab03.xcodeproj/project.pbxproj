@@ -17,6 +17,7 @@
 		64C75FD71A81F83000580560 /* New.m in Sources */ = {isa = PBXBuildFile; fileRef = 64C75FD61A81F83000580560 /* New.m */; };
 		64C75FDA1A81FB3600580560 /* List.m in Sources */ = {isa = PBXBuildFile; fileRef = 64C75FD91A81FB3600580560 /* List.m */; };
 		64C75FDD1A81FD6F00580560 /* Share.m in Sources */ = {isa = PBXBuildFile; fileRef = 64C75FDC1A81FD6F00580560 /* Share.m */; };
+		64C75FE01A82019A00580560 /* Detail.m in Sources */ = {isa = PBXBuildFile; fileRef = 64C75FDF1A82019A00580560 /* Detail.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,8 @@
 		64C75FD91A81FB3600580560 /* List.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = List.m; sourceTree = "<group>"; };
 		64C75FDB1A81FD6F00580560 /* Share.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Share.h; sourceTree = "<group>"; };
 		64C75FDC1A81FD6F00580560 /* Share.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Share.m; sourceTree = "<group>"; };
+		64C75FDE1A82019A00580560 /* Detail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Detail.h; sourceTree = "<group>"; };
+		64C75FDF1A82019A00580560 /* Detail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Detail.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +75,8 @@
 		64C75FA01A81E80E00580560 = {
 			isa = PBXGroup;
 			children = (
+				64C75FDE1A82019A00580560 /* Detail.h */,
+				64C75FDF1A82019A00580560 /* Detail.m */,
 				64C75FDB1A81FD6F00580560 /* Share.h */,
 				64C75FDC1A81FD6F00580560 /* Share.m */,
 				64C75FD81A81FB3600580560 /* List.h */,
@@ -235,6 +240,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				64C75FB51A81E80E00580560 /* Home.m in Sources */,
+				64C75FE01A82019A00580560 /* Detail.m in Sources */,
 				64C75FB21A81E80E00580560 /* AppDelegate.m in Sources */,
 				64C75FAF1A81E80E00580560 /* main.m in Sources */,
 				64C75FDD1A81FD6F00580560 /* Share.m in Sources */,
