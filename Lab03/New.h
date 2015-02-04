@@ -8,10 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
-@interface New : UIViewController
+// para poder trabajar con la camara necesitamos esta linea ...<UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextViewDelegate>
+
+@interface New : UIViewController<UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextViewDelegate>
+
 
 //Fields
 @property (strong, nonatomic) IBOutlet UITextField *inputName;
+
 @property (strong, nonatomic) IBOutlet UITextField *inputAnimo;
 
 @property (strong, nonatomic) IBOutlet UITextField *inputYoutube;

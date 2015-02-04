@@ -35,11 +35,15 @@
 */
 
 - (IBAction)actBack:(id)sender {
+    [self performSegueWithIdentifier:@"List to Home" sender:self];
+    
 }
 
 - (IBAction)actEdit:(id)sender {
+    [self performSegueWithIdentifier:@"List to New" sender:self];
 }
 
 - (IBAction)actDelete:(id)sender {
+    
 }
 @end

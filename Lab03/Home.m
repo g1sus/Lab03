@@ -25,14 +25,18 @@
 }
 
 - (IBAction)actNew:(id)sender {
+    [self performSegueWithIdentifier:@"Home to New" sender:self];
 }
 
 - (IBAction)actEdit:(id)sender {
+    [self performSegueWithIdentifier:@"Home to Lista" sender:self];
 }
 
 - (IBAction)actClean:(id)sender {
+    [self performSegueWithIdentifier:@"Home to Lista" sender:self];
 }
 
 - (IBAction)actList:(id)sender {
+    [self performSegueWithIdentifier:@"Home to Share" sender:self];
 }
 @end

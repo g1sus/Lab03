@@ -34,8 +34,7 @@
 }
 */
 
-- (IBAction)btnBack:(id)sender {
-}
 - (IBAction)btnBacka:(id)sender {
+    [self performSegueWithIdentifier:@"Detail to Home" sender:self];
 }
 @end

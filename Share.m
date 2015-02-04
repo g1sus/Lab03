@@ -33,14 +33,8 @@
     // Pass the selected object to the new view controller.
 }
 */
-
-- (IBAction)btnBack:(id)sender {
-}
-
 - (IBAction)actBack:(id)sender {
-}
-
-- (IBAction)actBack:(id)sender {
+    [self performSegueWithIdentifier:@"Share to Home" sender:self];
 }
 
 - (IBAction)actMore:(id)sender {
