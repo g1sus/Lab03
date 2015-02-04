@@ -34,4 +34,18 @@
 }
 */
 
+- (IBAction)btnBack:(id)sender {
+}
+
+- (IBAction)actBack:(id)sender {
+}
+
+- (IBAction)actBack:(id)sender {
+}
+
+- (IBAction)actMore:(id)sender {
+}
+
+- (IBAction)actShare:(id)sender {
+}
 @end

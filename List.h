@@ -10,4 +10,14 @@
 
 @interface List : UIViewController
 
+//TableView
+@property (strong, nonatomic) IBOutlet UITableView *tblDatos;
+
+//Actions
+- (IBAction)actBack:(id)sender;
+
+- (IBAction)actEdit:(id)sender;
+
+- (IBAction)actDelete:(id)sender;
+
 @end

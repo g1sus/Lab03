@@ -34,4 +34,8 @@
 }
 */
 
+- (IBAction)btnBack:(id)sender {
+}
+- (IBAction)btnBacka:(id)sender {
+}
 @end

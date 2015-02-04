@@ -34,4 +34,12 @@
 }
 */
 
+- (IBAction)actBack:(id)sender {
+}
+
+- (IBAction)actEdit:(id)sender {
+}
+
+- (IBAction)actDelete:(id)sender {
+}
 @end

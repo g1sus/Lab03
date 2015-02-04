@@ -12,5 +12,16 @@
 
 //TableView
 
+@property (strong, nonatomic) IBOutlet UITableView *tblDatos;
+
+
+
+//Actions
+- (IBAction)actBack:(id)sender;
+
+- (IBAction)actMore:(id)sender;
+
+- (IBAction)actShare:(id)sender;
+
 
 @end

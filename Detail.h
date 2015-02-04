@@ -10,4 +10,21 @@
 
 @interface Detail : UIViewController
 
+//Labels
+@property (strong, nonatomic) IBOutlet UILabel *lblName;
+@property (strong, nonatomic) IBOutlet UILabel *lblAnimo;
+
+
+
+//Image View
+@property (strong, nonatomic) IBOutlet UIImageView *imgPhoto;
+
+
+//WebView
+@property (strong, nonatomic) IBOutlet UIWebView *webVideo;
+
+
+//Actions
+- (IBAction)btnBacka:(id)sender;
+
 @end
