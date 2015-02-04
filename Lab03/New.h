@@ -10,4 +10,23 @@
 
 @interface New : UIViewController
 
+//Fields
+@property (strong, nonatomic) IBOutlet UITextField *inputName;
+@property (strong, nonatomic) IBOutlet UITextField *inputAnimo;
+
+@property (strong, nonatomic) IBOutlet UITextField *inputYoutube;
+
+
+
+//ImageView
+@property (strong, nonatomic) IBOutlet UIImageView *inputImgview;
+
+
+//Actions
+- (IBAction)btnSave:(id)sender;
+- (IBAction)btnBack:(id)sender;
+- (IBAction)btnPhoto:(id)sender;
+
+
+
 @end

@@ -34,4 +34,12 @@
 }
 */
 
+- (IBAction)btnSave:(id)sender {
+}
+
+- (IBAction)btnBack:(id)sender {
+}
+
+- (IBAction)btnPhoto:(id)sender {
+}
 @end

@@ -11,5 +11,19 @@
 @interface Home : UIViewController
 
 
+//Labels
+
+
+
+//Actions
+- (IBAction)actNew:(id)sender;
+
+- (IBAction)actEdit:(id)sender;
+
+- (IBAction)actClean:(id)sender;
+
+- (IBAction)actList:(id)sender;
+
+
 @end
 
