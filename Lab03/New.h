@@ -7,6 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "DBManager.h"
+
 
 // para poder trabajar con la camara necesitamos esta linea ...<UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextViewDelegate>
 

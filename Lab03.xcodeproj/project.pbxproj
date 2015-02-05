@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		64C4D3E51A8334F0007D2A85 /* DBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 64C4D3E41A8334F0007D2A85 /* DBManager.m */; };
+		64C4D3E71A83352D007D2A85 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 64C4D3E61A83352D007D2A85 /* libsqlite3.0.dylib */; };
 		64C75FAF1A81E80E00580560 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 64C75FAE1A81E80E00580560 /* main.m */; };
 		64C75FB21A81E80E00580560 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 64C75FB11A81E80E00580560 /* AppDelegate.m */; };
 		64C75FB51A81E80E00580560 /* Home.m in Sources */ = {isa = PBXBuildFile; fileRef = 64C75FB41A81E80E00580560 /* Home.m */; };
@@ -32,6 +34,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		64C4D3E31A8334F0007D2A85 /* DBManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBManager.h; sourceTree = "<group>"; };
+		64C4D3E41A8334F0007D2A85 /* DBManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBManager.m; sourceTree = "<group>"; };
+		64C4D3E61A83352D007D2A85 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
 		64C75FA91A81E80E00580560 /* Lab03.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lab03.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		64C75FAD1A81E80E00580560 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		64C75FAE1A81E80E00580560 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -61,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				64C4D3E71A83352D007D2A85 /* libsqlite3.0.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,6 +83,7 @@
 		64C75FA01A81E80E00580560 = {
 			isa = PBXGroup;
 			children = (
+				64C4D3E61A83352D007D2A85 /* libsqlite3.0.dylib */,
 				64C75FE11A82172400580560 /* img */,
 				64C75FAB1A81E80E00580560 /* Lab03 */,
 				64C75FC51A81E80E00580560 /* Lab03Tests */,
@@ -108,6 +115,8 @@
 				64C75FDC1A81FD6F00580560 /* Share.m */,
 				64C75FD81A81FB3600580560 /* List.h */,
 				64C75FD91A81FB3600580560 /* List.m */,
+				64C4D3E31A8334F0007D2A85 /* DBManager.h */,
+				64C4D3E41A8334F0007D2A85 /* DBManager.m */,
 				64C75FB61A81E80E00580560 /* Main.storyboard */,
 				64C75FB91A81E80E00580560 /* Images.xcassets */,
 				64C75FBB1A81E80E00580560 /* LaunchScreen.xib */,
@@ -258,6 +267,7 @@
 				64C75FDD1A81FD6F00580560 /* Share.m in Sources */,
 				64C75FDA1A81FB3600580560 /* List.m in Sources */,
 				64C75FD71A81F83000580560 /* New.m in Sources */,
+				64C4D3E51A8334F0007D2A85 /* DBManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -448,6 +458,7 @@
 				64C75FCE1A81E80E00580560 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		64C75FCF1A81E80E00580560 /* Build configuration list for PBXNativeTarget "Lab03Tests" */ = {
 			isa = XCConfigurationList;
@@ -456,6 +467,7 @@
 				64C75FD11A81E80E00580560 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

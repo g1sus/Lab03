@@ -37,7 +37,10 @@ UIAlertView *alert;
 */
 
 - (IBAction)btnSave:(id)sender {
-    [self performSegueWithIdentifier:@"New to Home" sender:self];
+    NSString *nombre = self.inputName.text;
+    NSString *estado = self.inputAnimo.text;
+    NSString *youtube = self.inputYoutube.text;
+    UIImage *imageData=UIImagePNGRepresentation([self.inputImgview image]);
 }
 
 - (IBAction)btnBack:(id)sender {
