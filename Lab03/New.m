@@ -41,6 +41,19 @@ UIAlertView *alert;
     NSString *estado = self.inputAnimo.text;
     NSString *youtube = self.inputYoutube.text;
     UIImage *imageData=UIImagePNGRepresentation([self.inputImgview image]);
+    if((nombre.length == 0)||(estado == 0)||(youtube == 0)){
+        alert = [[UIAlertView alloc] initWithTitle:@"Faltan campos!"
+                                           message:@"Oops! Parece que no haz llenado todos los campos!"
+                                          delegate:self
+                                 cancelButtonTitle:@"Ok"
+                                 otherButtonTitles: nil];
+        [alert show];
+    }
+    else{
+        if([[DBManager getSharedInstance]insertaDB:nombre estado:estado youtube:youtube foto:imageData]){
+            [self performSegueWithIdentifier:@"New to Home" sender:self];
+        }
+    }
 }
 
 - (IBAction)btnBack:(id)sender {

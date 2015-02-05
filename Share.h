@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "DBManager.h"
 
-@interface Share : UIViewController
+@interface Share : UIViewController<UITableViewDelegate, UITableViewDataSource, UIAlertViewDelegate>
 
 //TableView
 
