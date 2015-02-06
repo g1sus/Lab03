@@ -14,6 +14,7 @@ UIAlertView *alert;
 
 @end
 
+
 @implementation New
 
 - (void)viewDidLoad {
@@ -42,10 +43,10 @@ UIAlertView *alert;
     NSString *youtube = self.inputYoutube.text;
     UIImage *imageData=UIImagePNGRepresentation([self.inputImgview image]);
     if((nombre.length == 0)||(estado == 0)||(youtube == 0)){
-        alert = [[UIAlertView alloc] initWithTitle:@"Faltan campos!"
-                                           message:@"Oops! Parece que no haz llenado todos los campos!"
+        alert = [[UIAlertView alloc] initWithTitle:@"Alto!"
+                                           message:@"Debes llenar todos los campos!!!"
                                           delegate:self
-                                 cancelButtonTitle:@"Ok"
+                                 cancelButtonTitle:@"OK"
                                  otherButtonTitles: nil];
         [alert show];
     }
@@ -103,5 +104,7 @@ UIAlertView *alert;
     - (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {
         [picker dismissViewControllerAnimated:YES completion:NULL];
     }
+
+
 
 @end

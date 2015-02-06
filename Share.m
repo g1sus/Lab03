@@ -9,8 +9,10 @@
 #import "Share.h"
 #import "ShareList.h"
 
-NSMutableArray *datos;
-NSString *idTemp;
+NSMutableArray *ListadoDatos;
+int ListadoIndice;
+int indice = nil;
+
 
 
 @interface Share ()
@@ -31,7 +33,7 @@ NSString *idTemp;
 }
 
 - (void)initController{
-    datos = [[DBManager getSharedInstance]listDB:@"select agendaid, nombre, estado, youtube, foto from agenda"];
+    ListadoDatos = [[DBManager getSharedInstance]listDB:@"select agendaid, nombre, estado, youtube, foto from agenda"];
 }
 /*
 #pragma mark - Navigation
@@ -47,9 +49,28 @@ NSString *idTemp;
 }
 
 - (IBAction)actMore:(id)sender {
+    if(idTemp != nil){
+        [self performSegueWithIdentifier:@"Share to Detail" sender:self];
+    }
+
 }
 
 - (IBAction)actShare:(id)sender {
+    if(idTemp != nil){
+        NSMutableArray *dato = ListadoDatos[indice];
+        NSString *strMsg;
+        NSArray *activityItems;
+        UIImage *imgShare;
+        UIActivityViewController *actVC;
+        imgShare = [UIImage imageWithData:[dato objectAtIndex:4]];
+        strMsg = [NSString stringWithFormat: @"Comparte un contacto, se llama %@ y su estado es: %@", [dato objectAtIndex:1], [dato objectAtIndex:2]];
+        activityItems = @[imgShare, strMsg];
+        //Init activity view controller
+        actVC = [[UIActivityViewController alloc] initWithActivityItems:activityItems applicationActivities:nil];
+        actVC.excludedActivityTypes = [NSArray arrayWithObjects:UIActivityTypePrint, UIActivityTypeAssignToContact, UIActivityTypeCopyToPasteboard, UIActivityTypeAirDrop, nil];
+        [self presentViewController:actVC animated:YES completion:nil];
+        
+    }
 }
 
 
@@ -64,7 +85,7 @@ NSString *idTemp;
 //-------------------------------------------------------------------------------
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [datos count];
+    return [ListadoDatos count];
 }
 //-------------------------------------------------------------------------------
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -79,7 +100,7 @@ NSString *idTemp;
     if (cell == nil){
         cell = [[ShareList alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
-    NSMutableArray *dato = datos[indexPath.row];
+    NSMutableArray *dato = ListadoDatos[indexPath.row];
     cell.lblName.text = [dato objectAtIndex:1];
     cell.lblAnimo.text = [dato objectAtIndex:2];
     cell.picture.image = [UIImage imageWithData:[dato objectAtIndex:4]];
@@ -91,5 +112,9 @@ NSString *idTemp;
 //-------------------------------------------------------------------------------
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    NSMutableArray *dato = ListadoDatos[indexPath.row];
+    ListadoIndice = indexPath.row;
+    idTemp = [dato objectAtIndex:0];
+    self.lblTitulo.text = [dato objectAtIndex:1];
 }
 @end

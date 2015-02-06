@@ -96,20 +96,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZHz-Zb-qzw" userLabel="fldName">
-                                <rect key="frame" x="16" y="319" width="343" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Animo" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OTN-Jn-1eY" userLabel="fldAnimo">
                                 <rect key="frame" x="16" y="367" width="343" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Youtube" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DAO-k6-3x9" userLabel="fldYoutube">
                                 <rect key="frame" x="16" y="412" width="343" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UIC-JM-YEI" userLabel="btnSave">
                                 <rect key="frame" x="76" y="493" width="223" height="43"/>
@@ -147,6 +142,11 @@
                                     <action selector="btnPhoto:" destination="Ogd-tg-4aP" eventType="touchUpInside" id="74C-yz-LLT"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZHz-Zb-qzw" userLabel="fldName">
+                                <rect key="frame" x="16" y="319" width="343" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -274,7 +274,7 @@
                                 <rect key="frame" x="0.0" y="92" width="375" height="575"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="70" id="agF-dk-9qx">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="DetalleList" rowHeight="70" id="agF-dk-9qx" customClass="ShareList">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="agF-dk-9qx" id="eAT-Mq-5b2">
@@ -297,14 +297,30 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="lblAnimo" destination="kaw-MO-LE7" id="Oot-Bi-YrX"/>
+                                            <outlet property="lblName" destination="XUK-WK-qui" id="7FR-D5-Pky"/>
+                                            <outlet property="picture" destination="2Zd-KL-XvN" id="OFR-dL-v2o"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="bUz-k8-5JD" id="T7s-y6-P9v"/>
+                                    <outlet property="delegate" destination="bUz-k8-5JD" id="EgI-lr-R2a"/>
+                                </connections>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iZt-0N-sWR" userLabel="Titulo">
+                                <rect key="frame" x="150" y="28" width="209" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
+                        <outlet property="lblTitulo" destination="iZt-0N-sWR" id="nqx-1l-mMt"/>
                         <outlet property="tblDatos" destination="jrb-8E-Ww4" id="HxV-Xb-cNa"/>
                         <segue destination="vXZ-lx-hvc" kind="modal" identifier="List to Home" modalTransitionStyle="crossDissolve" id="YUn-In-eOf"/>
                         <segue destination="Ogd-tg-4aP" kind="modal" identifier="List to New" id="FAo-Ql-gSq"/>
@@ -401,11 +417,18 @@
                                     <action selector="actMore:" destination="FUa-dP-WDk" eventType="touchUpInside" id="e3X-5s-6kk"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m1M-Bf-gUZ" userLabel="Titulo">
+                                <rect key="frame" x="150" y="24" width="209" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
+                        <outlet property="lblTitulo" destination="m1M-Bf-gUZ" id="jhy-7G-SG5"/>
                         <outlet property="tblDatos" destination="tls-Ox-fbt" id="JUe-sD-vCq"/>
                         <segue destination="vXZ-lx-hvc" kind="modal" identifier="Share to Home" id="cQK-tf-hXo"/>
                         <segue destination="EXZ-KJ-bdQ" kind="modal" identifier="Share to Detail" id="vOi-YR-reg"/>
@@ -413,15 +436,15 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pa3-76-aoV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="807.5" y="-111.5"/>
+            <point key="canvasLocation" x="609.5" y="-835.5"/>
         </scene>
     </scenes>
     <resources>
         <image name="camera.png" width="256" height="256"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="cQK-tf-hXo"/>
-        <segue reference="odf-6y-rav"/>
         <segue reference="FAo-Ql-gSq"/>
+        <segue reference="YUn-In-eOf"/>
+        <segue reference="FVZ-5L-vVu"/>
     </inferredMetricsTieBreakers>
 </document>
