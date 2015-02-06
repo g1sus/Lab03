@@ -12,7 +12,6 @@
 
 NSMutableArray *ListadoDatos;
 int ListadoIndice;
-int Indice = nil;
 
 @interface List ()
 
@@ -22,6 +21,7 @@ int Indice = nil;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    idTemp=nil;
     [self initController];
     // Do any additional setup after loading the view.
 }

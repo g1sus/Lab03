@@ -22,6 +22,11 @@
 
 @property (strong, nonatomic) IBOutlet UITextField *inputYoutube;
 
+//buttons
+@property (strong, nonatomic) IBOutlet UIButton *btnBackList;
+@property (strong, nonatomic) IBOutlet UIButton *btnSave;
+@property (strong, nonatomic) IBOutlet UIButton *btnBack;
+@property (strong, nonatomic) IBOutlet UIButton *btnAct;
 
 
 //ImageView
@@ -32,6 +37,8 @@
 - (IBAction)btnSave:(id)sender;
 - (IBAction)btnBack:(id)sender;
 - (IBAction)btnPhoto:(id)sender;
+- (IBAction)btnAct:(id)sender;
+- (IBAction)btnBackList:(id)sender;
 
 
 

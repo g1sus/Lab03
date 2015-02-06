@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		64881C431A84B7FC00CC421E /* contactos.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 64881C421A84B7FC00CC421E /* contactos.jpg */; };
 		64C4D3E51A8334F0007D2A85 /* DBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 64C4D3E41A8334F0007D2A85 /* DBManager.m */; };
 		64C4D3E71A83352D007D2A85 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 64C4D3E61A83352D007D2A85 /* libsqlite3.0.dylib */; };
 		64C4D3EA1A8340BF007D2A85 /* ShareList.m in Sources */ = {isa = PBXBuildFile; fileRef = 64C4D3E91A8340BF007D2A85 /* ShareList.m */; };
@@ -38,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		64881C421A84B7FC00CC421E /* contactos.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = contactos.jpg; path = Lab03/contactos.jpg; sourceTree = "<group>"; };
 		64C4D3E31A8334F0007D2A85 /* DBManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBManager.h; sourceTree = "<group>"; };
 		64C4D3E41A8334F0007D2A85 /* DBManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBManager.m; sourceTree = "<group>"; };
 		64C4D3E61A83352D007D2A85 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
@@ -171,6 +173,7 @@
 		64C75FE11A82172400580560 /* img */ = {
 			isa = PBXGroup;
 			children = (
+				64881C421A84B7FC00CC421E /* contactos.jpg */,
 				64C75FE21A8217C800580560 /* camera.png */,
 			);
 			name = img;
@@ -260,6 +263,7 @@
 				64C75FBD1A81E80E00580560 /* LaunchScreen.xib in Resources */,
 				64C75FE31A8217C800580560 /* camera.png in Resources */,
 				64C75FBA1A81E80E00580560 /* Images.xcassets in Resources */,
+				64881C431A84B7FC00CC421E /* contactos.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
